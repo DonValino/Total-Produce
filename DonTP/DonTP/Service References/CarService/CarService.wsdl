@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56125/CarService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56125/CarService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56125/CarService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DonTP.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICarServices_addCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:addCar" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_addCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_editCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:editCar" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_editCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:editCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_deleteCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCar" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_deleteCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_dropTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:dropTable" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_dropTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dropTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_createTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:createTable" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_createTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_getAllData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllData" />
+  </wsdl:message>
+  <wsdl:message name="ICarServices_getAllData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICarServices">
+    <wsdl:operation name="addCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarServices/addCar" message="tns:ICarServices_addCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarServices/addCarResponse" message="tns:ICarServices_addCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="editCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarServices/editCar" message="tns:ICarServices_editCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarServices/editCarResponse" message="tns:ICarServices_editCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarServices/deleteCar" message="tns:ICarServices_deleteCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarServices/deleteCarResponse" message="tns:ICarServices_deleteCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dropTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarServices/dropTable" message="tns:ICarServices_dropTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarServices/dropTableResponse" message="tns:ICarServices_dropTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarServices/createTable" message="tns:ICarServices_createTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarServices/createTableResponse" message="tns:ICarServices_createTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICarServices/getAllData" message="tns:ICarServices_getAllData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICarServices/getAllDataResponse" message="tns:ICarServices_getAllData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICarServices" type="tns:ICarServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="addCar">
+      <soap:operation soapAction="http://tempuri.org/ICarServices/addCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCar">
+      <soap:operation soapAction="http://tempuri.org/ICarServices/editCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCar">
+      <soap:operation soapAction="http://tempuri.org/ICarServices/deleteCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dropTable">
+      <soap:operation soapAction="http://tempuri.org/ICarServices/dropTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createTable">
+      <soap:operation soapAction="http://tempuri.org/ICarServices/createTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllData">
+      <soap:operation soapAction="http://tempuri.org/ICarServices/getAllData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CarService">
+    <wsdl:port name="BasicHttpBinding_ICarServices" binding="tns:BasicHttpBinding_ICarServices">
+      <soap:address location="http://localhost:56125/CarService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

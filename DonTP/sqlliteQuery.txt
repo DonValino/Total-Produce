@@ -1,0 +1,23 @@
+            /* Querying all the data
+            sqlite_cmd.CommandText = "SELECT * FROM cars";
+
+            // Now the SQLiteCommand object can give us a DataReader-Object:
+            sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+            // The SQLiteDataReader allows us to run through the result lines:
+            while (sqlite_datareader.Read()) // Read() returns true if there is still a result line to read
+            {
+                int id = sqlite_datareader.GetInt16(0);
+                string Make = sqlite_datareader.GetString(1);
+                string Model = sqlite_datareader.GetString(2);
+                int year = sqlite_datareader.GetInt16(3);
+                int mileage = sqlite_datareader.GetInt16(4);
+                int price = sqlite_datareader.GetInt32(5);
+
+                // Adding to a list all the cars data from DB
+                Add(new Car(id, Make, Model, year, mileage, price));
+
+            }
+
+            // We are ready, now lets cleanup and close our connection:
+            sqlite_conn.Close();*/

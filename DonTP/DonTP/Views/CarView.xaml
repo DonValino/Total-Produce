@@ -1,0 +1,36 @@
+<UserControl xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"  xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" xmlns:ViewModels="clr-namespace:DonTP.ViewModels"
+             xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="DonTP.Views.CarView"
+             mc:Ignorable="d"
+             DataContext="{dxmvvm:ViewModelSource Type={x:Type ViewModels:CarViewModel}}"
+             d:DesignHeight="350" d:DesignWidth="300">
+
+    <dxmvvm:Interaction.Behaviors>
+        <dx:DXMessageBoxService/>
+        <dxmvvm:CurrentWindowService />
+    </dxmvvm:Interaction.Behaviors>
+
+    <StackPanel>
+        <dxb:ToolBarControl VerticalAlignment="Stretch" Height="30">
+            <dxb:BarButtonItem Content="Clear" Command="{Binding ResetAllDataCommand}"/>
+            <dxb:BarButtonItem Content="Save" Command="{Binding SaveCommand}"/>
+            <dxb:BarButtonItem Content="Cancel" Command="{Binding RevertCommand}"/>
+        </dxb:ToolBarControl>
+        <Label x:Name="IdLabel" Content="Id"/>
+        <dxe:TextEdit Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}" Height="30" IsReadOnly="True" />
+        <Label x:Name="MakeLabel" Content="Make"/>
+        <dxe:TextEdit Text="{Binding Make, UpdateSourceTrigger=PropertyChanged}" Height="30" />
+        <Label x:Name="ModelLabel" Content="Model"/>
+        <dxe:TextEdit Text="{Binding Model, UpdateSourceTrigger=PropertyChanged}" Height="30" />
+        <Label x:Name="YearLabel" Content="Year"/>
+        <dxe:TextEdit Text="{Binding Year, UpdateSourceTrigger=PropertyChanged}" Height="30" />
+        <Label x:Name="MileageLabel" Content="Mileage"/>
+        <dxe:TextEdit Text="{Binding Mileage, UpdateSourceTrigger=PropertyChanged}" Height="30" />
+        <Label x:Name="PriceLabel" Content="Price"/>
+        <dxe:TextEdit Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" Height="30" />
+    </StackPanel>
+</UserControl>

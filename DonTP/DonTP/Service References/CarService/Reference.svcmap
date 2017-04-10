@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1d51c366-4d9c-4133-b11a-1dc2e17ff41c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56125/CarService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CarService.disco" MetadataType="Disco" ID="a4608d8f-cce6-4ca0-b034-46a037c35f02" SourceId="1" SourceUrl="http://localhost:56125/CarService.svc?disco" />
+    <MetadataFile FileName="CarService.wsdl" MetadataType="Wsdl" ID="535bd225-9e4a-4538-b10f-c471adc12cd0" SourceId="1" SourceUrl="http://localhost:56125/CarService.svc?wsdl" />
+    <MetadataFile FileName="CarService.xsd" MetadataType="Schema" ID="1b9ffdf6-3219-4871-a768-230bf0de9a5d" SourceId="1" SourceUrl="http://localhost:56125/CarService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CarService1.xsd" MetadataType="Schema" ID="f55ff5e3-0daf-4451-a41b-b457f6032289" SourceId="1" SourceUrl="http://localhost:56125/CarService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CarService2.xsd" MetadataType="Schema" ID="6e0b10bc-1e08-4975-ba83-bdb1b71d4fc0" SourceId="1" SourceUrl="http://localhost:56125/CarService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
